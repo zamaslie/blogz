@@ -1,21 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>{{title}}</title>
-        <link rel="stylesheet" type="text/css" href="./static/styles/style.css">
-    </head>
-    <body>
-        <h1>Build-A-Blog!</h1>
+<head>
+    <title>Build A Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
 
+    <header>
         <nav>
-            <a href='/blog'>View Blog</a> | 
-            <a href='/newpost'>New Post</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Main Blog Page</a></li>
+                <li><a href="/newpost">Add a Blog Entry</a></li>
+                <li><a href="/signup">User Signup</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/logout">Logout</a></li>
+                </ul>
         </nav>
-            
-        <hr />
+    </header>
 
-        {% block content %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-    </body>
+</body>
 </html>

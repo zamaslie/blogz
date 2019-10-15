@@ -1,12 +1,14 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-<!doctype html>
-<html>
-    <body>
-        <h2>{{blogs.title}}</h2>
-        <p>{{blogs.body}}</p>
-    </body>
-</html>
+    
+<h1>Individual Blog Posts</h1>
+
+    <div>
+        <h2>{{single_post.title}}</h2>
+        <p class="entry">{{single_post.body}}</p>
+        <p class="byline">Written by <a href="./blog?user={{single_post.owner_id}}">{{single_post.owner.username}}</a></p>
+    </div>
+    
 
 {% endblock %}
